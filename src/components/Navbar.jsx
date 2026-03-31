@@ -1,16 +1,48 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
+  const navigate = useNavigate();
+
   return (
-    <nav style={{ padding: "10px", background: "#0f172a", color: "white" }}>
+    <nav style={styles.nav}>
       <h2>SchemeScout</h2>
-      <div style={{ display: "flex", gap: "15px" }}>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
+
+      <div style={styles.links}>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
       </div>
+
+      <button
+        style={styles.aiBtn}
+        onClick={() => navigate("/form", { state: { runAI: true } })}
+      >
+        🤖 AI
+      </button>
     </nav>
   );
 }
 
-export default Navbar;
+const styles = {
+  nav: {
+    display: "flex",
+    justifyContent: "space-between",
+    padding: "10px 20px",
+    background: "#0f172a",
+    color: "white",
+  },
+  links: {
+    display: "flex",
+    gap: "20px",
+  },
+  aiBtn: {
+    background: "#22c55e",
+    color: "white",
+    border: "none",
+    padding: "8px 15px",
+    borderRadius: "5px",
+    cursor: "pointer",
+  },
+};
+
+export default Navbar; // 🔥 IMPORTANT
