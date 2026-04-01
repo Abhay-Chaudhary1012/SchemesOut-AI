@@ -11,7 +11,7 @@ function AISection({ formData }) {
 
     try {
       const res = await axios.post(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=YOUR_API_KEY`,
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCE02-h8LfMAJrkBMRHc4XzBljejs2puUM`,
         {
           contents: [
             {
@@ -52,7 +52,6 @@ Suggest 3 government schemes in simple Hindi.`
     setLoading(false);
   };
 
-  // 🔥 AUTO RUN
   useEffect(() => {
     handleAI();
   }, []);

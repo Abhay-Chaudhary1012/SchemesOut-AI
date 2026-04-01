@@ -37,7 +37,6 @@ function Form() {
     }, 1500);
   };
 
-  // 🔥 RUN ONLY WHEN AI BUTTON CLICKED
   useEffect(() => {
     if (location.state?.runAI) {
       handleAI();

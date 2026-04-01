@@ -45,4 +45,4 @@ const styles = {
   },
 };
 
-export default Navbar; // 🔥 IMPORTANT
+export default Navbar; 
