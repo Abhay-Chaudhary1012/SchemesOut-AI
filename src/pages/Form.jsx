@@ -46,7 +46,7 @@ function Form() {
 
   return (
     <div className="container">
-      <h1>Find My Schemes 🧾</h1>
+      <h1>Find My Schemes </h1>
 
       <input name="age" placeholder="Age" onChange={handleChange} /><br />
 

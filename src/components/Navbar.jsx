@@ -17,7 +17,7 @@ function Navbar() {
         style={styles.aiBtn}
         onClick={() => navigate("/form", { state: { runAI: true } })}
       >
-        🤖 AI
+         AI
       </button>
     </nav>
   );
